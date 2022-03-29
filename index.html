@@ -8,20 +8,20 @@
   </head>
   <body>
     <!--champion score and timer-->
-    <section>
-      <h1>Champions 🏆✨</h1>
-      <h1>Timer:</h1>
+    <section class="champions-timers">
+      <h1>Champions 🏆✨: <span id="view-champions"></span></h1>
+      <h1>Timer: <span id="timer"></span></h1>
     </section>
     <!--quiz container with start button-->
-    <section>
-      <div>
+    <section class="start-p" id="start-p">
+      <div class="header">
         <h2>Coding Quiz Challenge</h2>
         <h3>Are you a wizard? 🔮</h3>
       </div>
-      <div>
-        <button>Begin</button>
+      <div class="container">
+        <button id="start-btn" class="start-btn">Begin</button>
       </div>
-      <div>
+      <div class="instruct">
         <p>
           Try to answer the following code-related questions within the time
           limit <br />
@@ -31,19 +31,19 @@
       </div>
     </section>
     <!--container for questions-->
-    <div>
-      <h2>Questions</h2>
-      <ul>
-        Answers
-      </ul>
+    <div id="quiz" class="quiz">
+      <h2 id="quiz-question" class="quiz-question"></h2>
+      <ul id="quiz-answer" class="quiz-answer"></ul>
+      <div id="question-feed" class="feed hidden"></div>
     </div>
     <!--container for high scores-->
-    <section>
-      <h2>Champions 🏆✨</h2>
-      <div>
-        <label>Enter your initials: </label>
+    <section id="quiz-end" class="quiz-end hidden">
+      <h2>Times up!</h2>
+      <p>Final score is <span id="final-score"></span></p>
+      <div class="initial-data">
+        <label for="initials">Enter your initials: </label>
         <input type="text" id="intials" name="initials" />
-        <button>Submit</button>
+        <button type="submit" id="submit-btn">Submit</button>
       </div>
     </section>
   </body>
