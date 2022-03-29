@@ -68,7 +68,6 @@ var countDownEl = document.querySelector("#timer");
 var quizEl = document.getElementById("quiz");
 var quizQuestionEl = document.getElementById("quiz-question");
 var quizAnswersEl = document.getElementById("quiz-answers");
-var initialsEl = document.getElementById("initals");
 var submitBtn = document.getElementById("submit-btn");
 var quizEndEl = document.getElementById("quiz-end");
 
@@ -130,6 +129,13 @@ function endQuiz() {
   quizEndEl.classList.remove("hidden");
   var finalScoreEl = document.getElementById("final-score");
   finalScoreEl.textContent = score;
+}
+function getInitials() {
+  var initialsEl = document.getElementById("initals");
+  if (!initialsEl || initialsEl.value === "") {
+    alert("Please enter initials");
+  } else {
+  }
 }
 
 startBtn.addEventListener("click", countDown);
