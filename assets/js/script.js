@@ -135,7 +135,22 @@ function getInitials() {
   if (!initialsEl || initialsEl.value === "") {
     alert("Please enter initials");
   } else {
+    var lastHighScore = localStorage.getItem(scoreName);
+    var lastHighScoreArray = JSON.parse(lastHighScore);
+    if (!lastHighScoreArray || score > lastHighScoreArray[0].newScore) {
+      var scoreData = {
+        name: initialsEl.value,
+        newScore: score,
+      };
+      if (!lastHighScoreArray) lastHighScoreArray = [];
+      lastHighScoreArray.push(scoreData);
+      lastHighScoreArray.sort(function (a, b) {
+        return -(a.newScore - b.newScore);
+      });
+      localStorage.setItem(scoreName, JSON.stringify(lastHighScoreArray));
+    }
   }
+  console.log();
 }
 
 startBtn.addEventListener("click", countDown);
