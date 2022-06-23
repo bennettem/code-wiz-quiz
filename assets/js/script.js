@@ -3,17 +3,21 @@ var score = 0;
 var savedScores = [];
 
 var currentQuestionIndex = 0;
-var startBtn = document.querySelector("#start-btn");
 var startPEl = document.getElementById("start-p");
 var countDownEl = document.querySelector("#timer");
 var countDownTimer;
 var quizEl = document.getElementById("quiz");
 var quizQuestionEl = document.getElementById("quiz-question");
 var quizAnswersEl = document.getElementById("quiz-answer");
+
+// buttons 
+var startBtn = document.querySelector("#start-btn");
 var submitBtn = document.getElementById("submit-btn");
 var quizEndEl = document.getElementById("quiz-end");
 var backBtn = document.querySelector("#back");
 var clearResultbtn = document.querySelector("#clear-reset");
+
+// high score results vars 
 var initialsEl = document.getElementById("initials");
 var scoreName = "endscore";
 var highresultEl = document.getElementById("show-result");

@@ -33,14 +33,14 @@
     </section>
     <!--container for questions-->
     <div id="quiz" class="quiz">
-      <h2 id="quiz-question" class="quiz-question"></h2>
+      <h2 id="quiz-question" class="quiz-question "></h2>
       <ul id="quiz-answer" class="quiz-answer"></ul>
-      <div id="question-feed" class="feed hidden"></div>
+      <div id="question-feed" class="feed hidden "></div>
     </div>
     <!--container for high scores-->
     <section id="quiz-end" class="quiz-end hidden">
       <h2>Times up!</h2>
-      <p>Final score is <span id="final-score"></span></p>
+      <p>Final score is: <span id="final-score"></span></p>
       <div class="initial-data">
         <label for="initials">Enter your initials: </label>
         <input type="text" id="initials" name="initials" />
@@ -51,8 +51,10 @@
     <section id="show-result" class="high-result hidden">
       <h2>Champions 🏆✨</h2>
       <imput type="text" id="show-high-result" name="show-high-result">
+        <div class="container">
         <button type="reset" id="back" class="btn">Back</button>
         <button type="reset" id="clear-reset" class="btn">Clear Champs</button>
+        </div>
       </section>    
 
     <script src="assets/js/script.js"></script>
