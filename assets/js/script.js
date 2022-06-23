@@ -1,7 +1,6 @@
 // timer and score var
 var score = 0;
 var savedScores = [];
-var countDownTimer;
 
 // question arrays
 var questions = [
@@ -66,6 +65,7 @@ var currentQuestionIndex = 0;
 var startBtn = document.querySelector("#start-btn");
 var startPEl = document.getElementById("start-p");
 var countDownEl = document.querySelector("#timer");
+var countDownTimer;
 var quizEl = document.getElementById("quiz");
 var quizQuestionEl = document.getElementById("quiz-question");
 var quizAnswersEl = document.getElementById("quiz-answer");
@@ -95,7 +95,7 @@ function retreiveHighScore() {
   var lastHighScore = localStorage.getItem(scoreName);
   var lastHighScoreArray = JSON.parse(lastHighScore);
   if (lastHighScoreArray) {
-    return (retreivedHighScore = lastHighScoreArray[0].newScore);
+    return (retreiveHighScore = lastHighScoreArray[0].newScore);
   } else return 0;
 }
 
