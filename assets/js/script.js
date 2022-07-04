@@ -10,16 +10,16 @@ var quizEl = document.getElementById("quiz");
 var quizQuestionEl = document.getElementById("quiz-question");
 var quizAnswersEl = document.getElementById("quiz-answer");
 
-// buttons 
+// buttons
 var startBtn = document.querySelector("#start-btn");
 var submitBtn = document.getElementById("submit-btn");
 var quizEndEl = document.getElementById("quiz-end");
 var backBtn = document.querySelector("#back");
 var clearResultbtn = document.querySelector("#clear-reset");
 
-// high score results vars 
+// high score results vars
 var initialsEl = document.getElementById("initials");
-var scoreName = "endscore";
+var scoreName = document.querySelector("high-result");
 var highresultEl = document.getElementById("show-result");
 // question arrays
 var questions = [
@@ -245,3 +245,6 @@ function startGameOver() {
 startBtn.addEventListener("click", countDown);
 backBtn.addEventListener("click", startGameOver);
 clearResultbtn.addEventListener("click", clearLocalStorage);
+submitBtn.addEventListener("click", function () {
+  showResults(scoreName);
+});
