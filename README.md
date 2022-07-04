@@ -5,3 +5,9 @@ As the user gets answers right below text will display "right" and the user will
 will display "wrong" and the time will deduct 10 seconds from thte time left. At the end of the quiz the user is able to type in their initials 
 and the top score qill display at the top right of the screen as the user chooses to play again. 
 
+#Deployed link
+
+https://bennettem.github.io/code-wiz-quiz/
+
+#Mock up of site
+
